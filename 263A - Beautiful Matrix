@@ -1,0 +1,25 @@
+#include<iostream>
+#include<string>
+#include<vector>
+using namespace std;
+
+int main()
+{
+    int mid = 2;
+    int position;
+    vector<vector<int>>mat(5, vector<int>(5,0));
+    for(int i = 0; i < 5; i++)
+    {
+        for(int j = 0; j < 5; j++)
+        {   
+            cin >> mat[i][j];
+            if(mat[i][j])
+            {
+                position = (abs(mid-i) + abs(mid-j));
+            }
+        }
+    }
+    cout << position;
+    return 0;
+    
+}
