@@ -1,0 +1,32 @@
+#include<bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+    string str;
+    cin >> str;
+    long long int count = 1;
+    char last = str[0];
+    
+    for(int i = 1; i < str.length(); i++)
+    {
+        if(str[i] == last)
+            count++;
+        else
+        {
+            count = 1;
+            last = str[i];
+        }
+        if(count == 7)
+        {
+            cout << "YES";
+            return 0;
+        }
+    }
+    
+    
+    cout << "NO";
+    
+    return 0;
+    
+}
