@@ -1,0 +1,30 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+int main()
+{
+    int t;
+    cin >> t;
+    
+    while(t--)
+    {
+        long long int n;
+        cin >> n;
+        long long int arr[n];
+        unordered_map<long long int,long long int>mp;
+        for(int i = 0; i < n; i++)
+        {
+            cin >> arr[i];
+            mp[arr[i]]++;
+        }
+        
+        sort(arr,arr+n);
+        
+        if(mp.size()==1)
+            cout << n*(n-1) << endl;
+        else
+            cout << mp[arr[0]]*mp[arr[n-1]]*2 << endl;
+    }
+
+    return 0;
+}
