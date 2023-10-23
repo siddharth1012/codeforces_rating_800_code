@@ -1,0 +1,25 @@
+#include<bits/stdc++.h>
+#define ll long long 
+using namespace std;
+
+int main()
+{
+    ll int t; 
+    cin >> t;
+    
+    while(t--)
+    {
+        ll int n;
+        cin >> n;
+        
+        ll int mod = n%2020;
+        ll int divi = n/2020;
+        
+        if(mod <= divi)
+            cout << "Yes" << endl;
+        else
+            cout << "No" << endl;
+    }
+    return 0;
+    
+}
